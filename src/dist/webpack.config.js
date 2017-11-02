@@ -6,6 +6,9 @@ module.exports = {
     path: path.resolve(__dirname, "dir"),
     filename: "app.bundle.js"
   },
+  devServer: {
+    contentBase: "./dist"
+  },
   module: {
     loaders: [
       {
@@ -32,9 +35,20 @@ module.exports = {
             loader: "sass-loader" // compiles Sass to CSS
           }
         ]
-      }
+      },
+      {
+        test: /|.woff2?$|\.ttf$|\.eot$|\.svg$/,
+        loader: "file-loader"
+      },
+      { test: /bootstrap\/dist\/js\/umd\//, loader: "imports?jQuery=jquery" }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
+  ],
   stats: {
     colors: true
   },

@@ -3,14 +3,87 @@
 
 <head>
     <meta charset="utf-8">
-    <title>title</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horror Show</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#movies">Holloween Wobble Site</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active navMovies">
+                    <a href="#movies">Movies</a>
+                </li>
+                <li class="navSuprise">
+                    <a href="#surprise"> Surprise</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- page content -->
-    <script src="./app.bundle.js"></script>
+    <div class="content">
+        <!--- Page of Movies -->
+        <div id="movies" class="container">
+            <div class="row movies">
+                <!-- Movies dynamically placed here via jquery -->
+                <!--<div class="col-md-4">.col-md-4</div> -->
+            </div>
+        </div>
+
+        <!-- Modal in Action -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!---Modal Content here-->
+                <div class="modal-content">
+                    <!-- modal header -->
+                    <div class="modal header">
+                        <button type="button" class="close" data-dismiss="modal">$times;</button>
+                        <h4 class="modal-title">Movie Details!!</h4>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 product_img">
+                                <img class="movieDetails-img">
+                            </div>
+                            <div class="col-md-6 product_content ">
+                                <h4 class="movieDetails-tagline"></h4>
+                                <h3 class="cost ">
+                                    <span class="glyphicon-usd "></span> 75.00
+                                    <small class="pre-cost">
+                                        <span class="glyphicon glyphicon-usd "></span> 60.00</small>
+                                </h3>
+                                <div class="space-ten "></div>
+                                <div class="btn-ground ">
+                                    <button type="button " class="btn btn-primary ">
+                                        <span class="glyphicon glyphicon-shopping-cart "></span> Add to Cart</button>
+                                    <button type="button " class="btn btn-primary ">
+                                        <span class="glyphicon glyphicon-heart "></span>Add to Wish List</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">CLose</button>
+                    </div>
+                </div>
+                <!-- End of Modal Content-->
+            </div>
+        </div>
+        <!--end of content-->
+    </div>
+
+    <script type="text/javascript ">
+        document.body.classList.add("hidden"
+    </script>
+    <script src='./app.bundle.js '></script>
 </body>
 
 </html>
